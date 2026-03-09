@@ -3,6 +3,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -102,9 +103,9 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 24px ;
+    margin: 24px;
     padding: 20px;
-    padding-top: 50px;
+    min-height: 100vh;
 }
 
 .hero-content h1 {
@@ -154,21 +155,24 @@ nav a:hover {
         text-align: center;
     }
 
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
     .hero-image img {
         display: none;
     }
 }
 
 .container-about {
-    margin-top: 5rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .about-content {
     text-align: center;
-
 }
 
 .about-content h2 {
@@ -226,5 +230,9 @@ nav a:hover {
 @media screen and (max-width: 768px) {
     .card-services {
         display: grid;
+    }
+
+    .about-content {
+        padding: 30px;
     }
 }
